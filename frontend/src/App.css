@@ -1,0 +1,250 @@
+/* 기본 스타일링 */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.App.dark-mode {
+  background-color: #333;
+  color: #f0f2f5;
+}
+
+.App-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-banner {
+  background-color: #007bff;
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.App-title {
+  margin: 0;
+  font-size: 24px;
+}
+
+.App-nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.App-nav-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.App-nav-link:hover {
+  text-decoration: underline;
+}
+
+.App-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.App-btn:hover {
+  color: #cce5ff;
+}
+
+.App-main {
+  margin-top: 60px; /* 상단 배너 높이만큼 공간 확보 */
+  padding: 20px;
+  flex: 1;
+}
+
+/* 게시물 목록 스타일링 */
+.Post-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Post-item {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 15px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.Post-item h3 {
+  margin: 0;
+  color: #333;
+}
+
+.Post-item p {
+  margin: 10px 0;
+}
+
+.Post-item small {
+  display: block;
+  margin-top: 10px;
+  color: #555;
+}
+
+/* 게시물 작성 폼 스타일링 */
+.Post-form {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 20px auto;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.Post-form input, .Post-form textarea, .Post-form select {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.Post-form textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.Post-form button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.Post-form button:hover {
+  background-color: #0056b3;
+}
+
+/* 인증 폼 스타일링 */
+.Auth-form {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 20px auto;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.Auth-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.Auth-form button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.Auth-form button:hover {
+  background-color: #0056b3;
+}
+
+/* 게시물 상세 스타일링 */
+.Post-detail {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.Post-detail img, .Post-detail video {
+  max-width: 100%;
+  margin: 10px 0;
+}
+
+/* 다크 모드에서의 스타일링 */
+.App.dark-mode .App-banner {
+  background-color: #444;
+}
+
+.App.dark-mode .App-nav-link {
+  color: #f0f2f5;
+}
+
+.App.dark-mode .App-btn {
+  color: #f0f2f5;
+}
+
+.App.dark-mode .Post-item {
+  background-color: #444;
+  border: 1px solid #666;
+}
+
+.App.dark-mode .Post-item h3, 
+.App.dark-mode .Post-item p,
+.App.dark-mode .Post-item small {
+  color: #f0f2f5;
+}
+
+.App.dark-mode .Post-form,
+.App.dark-mode .Auth-form,
+.App.dark-mode .Post-detail {
+  background-color: #444;
+  border: 1px solid #666;
+}
+
+.App.dark-mode .Post-form input, 
+.App.dark-mode .Post-form textarea, 
+.App.dark-mode .Post-form select,
+.App.dark-mode .Auth-form input,
+.App.dark-mode .Auth-form button {
+  color: #f0f2f5;
+  background-color: #555;
+  border-color: #666;
+}
+
+.App.dark-mode .Auth-form button {
+  background-color: #007bff;
+}
+
+.App.dark-mode .Auth-form button:hover {
+  background-color: #0056b3;
+}
+
+.App.dark-mode .Post-detail {
+  color: #f0f2f5;
+}
